@@ -20,7 +20,7 @@ const PRODUCT_CATALOG = [
 // --- 2. AI INTEGRATION ---
 // This function talks to Google's Gemini API
 const getAIRecommendations = async (userQuery, products) => {
-  const apiKey = "AIzaSyCIz_PqjrvXA81jSgjGqEFZrVvVsyOCygY"; // System provides this automatically
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
   
   // We send the list of products to the AI so it knows what we have.
   // We ask it to return JSON to make it easy to parse.
